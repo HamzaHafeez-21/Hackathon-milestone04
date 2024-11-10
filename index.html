@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="resumeForm" class="form">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="input" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="input" required><br>
+
+            <h2>Education</h2>
+            <div id="educationContainer">
+                <div class="education-entry">
+                    <label for="education">Education:</label>
+                    <textarea id="education" name="education" class="textarea" required></textarea><br>
+                </div>
+            </div>
+            <button type="button" onclick="addEducation()" class="button add-more">Add More Education</button>
+
+            <h2>Work Experience</h2>
+            <div id="experienceContainer">
+                <div class="experience-entry">
+                    <label for="experience">Work Experience:</label>
+                    <textarea id="experience" name="experience" class="textarea" required></textarea><br>
+                </div>
+            </div>
+            <button type="button" onclick="addExperience()" class="button add-more">Add More Experience</button>
+
+            <h2>Skills</h2>
+            <div id="skillsContainer">
+                <div class="skills-entry">
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" name="skills" class="textarea" required></textarea><br>
+                </div>
+            </div>
+            <button type="button" onclick="addSkill()" class="button add-more">Add More Skills</button>
+
+            <button type="submit" class="button">Generate Resume</button>
+        </form>
+        
+        <div id="resumeOutput" class="resume-output">
+            <h2>Resume</h2>
+        </div>
+        <button type="button" onclick="downloadPDF()" class="button">Download as PDF</button>
+        <button type="button" onclick="shareResume()" class="button">Share Resume</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
